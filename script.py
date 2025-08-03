@@ -1,0 +1,165 @@
+# Create the HTML file for the stock market dashboard
+html_content = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Performance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <h1 class="dashboard-title">Stock Market Performance Dashboard</h1>
+            <p class="dashboard-subtitle">Historical Analysis of Market Corrections & Bear Markets</p>
+        </header>
+
+        <!-- Key Metrics Overview -->
+        <section class="metrics-overview">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">📉</div>
+                    <div class="metric-content">
+                        <h3 class="metric-label">Average Bear Market Decline</h3>
+                        <div class="metric-value decline">-40.9%</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">⏱️</div>
+                    <div class="metric-content">
+                        <h3 class="metric-label">Average Recovery Time</h3>
+                        <div class="metric-value">55.4 months</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">📅</div>
+                    <div class="metric-content">
+                        <h3 class="metric-label">Time Between Bear Markets</h3>
+                        <div class="metric-value">7.6 years</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🕒</div>
+                    <div class="metric-content">
+                        <h3 class="metric-label">Latest Bear Market</h3>
+                        <div class="metric-value">2022 <span class="decline">(-25.4%)</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frequency Analysis Section -->
+        <section class="frequency-section">
+            <h2 class="section-title">Market Decline Frequency Analysis</h2>
+            <div class="table-container">
+                <table class="frequency-table">
+                    <thead>
+                        <tr>
+                            <th>Decline Type</th>
+                            <th>Frequency</th>
+                            <th>Average Recovery Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="frequency-table-body">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Historical Bear Markets Section -->
+        <section class="historical-section">
+            <h2 class="section-title">Historical Bear Markets (Post-WWII)</h2>
+            <div class="table-container">
+                <table class="historical-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Peak-to-Trough Decline</th>
+                            <th>Duration (Months)</th>
+                            <th>Recovery Time (Months)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historical-table-body">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Recent Bear Markets Spotlight -->
+        <section class="recent-section">
+            <h2 class="section-title">Recent Bear Markets Spotlight</h2>
+            <div class="recent-grid" id="recent-bear-markets">
+                <!-- Data will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Statistics Summary -->
+        <section class="stats-section">
+            <h2 class="section-title">Statistical Summary</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Bear Market Statistics (Post-WWII)</h3>
+                    <div class="stat-row">
+                        <span>Total Bear Markets:</span>
+                        <span class="stat-value">11</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Average Decline:</span>
+                        <span class="stat-value decline">-35.5%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Median Decline:</span>
+                        <span class="stat-value decline">-33.5%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Average Duration:</span>
+                        <span class="stat-value">16.4 months</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Average Recovery:</span>
+                        <span class="stat-value">36.0 months</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Time Between Bear Markets</h3>
+                    <div class="stat-row">
+                        <span>Average:</span>
+                        <span class="stat-value">7.6 years</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Median:</span>
+                        <span class="stat-value">7.0 years</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Shortest Gap:</span>
+                        <span class="stat-value">2 years</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Longest Gap:</span>
+                        <span class="stat-value">13 years</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <p>Data covers S&P 500 bear markets (20%+ declines) from 1946-2024. Historical performance does not guarantee future results.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>'''
+
+# Save the HTML file
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("✅ index.html created successfully")
