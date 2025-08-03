@@ -1,0 +1,29 @@
+{
+  "name": "stock-market-dashboard",
+  "version": "1.0.0",
+  "description": "Interactive dashboard analyzing historical stock market corrections and bear markets",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/stock-market-dashboard.git"
+  },
+  "keywords": [
+    "stock-market",
+    "bear-market",
+    "financial-dashboard",
+    "market-analysis",
+    "investing",
+    "data-visualization"
+  ],
+  "author": "Jacob Rothe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/stock-market-dashboard/issues"
+  },
+  "homepage": "https://github.com/yourusername/stock-market-dashboard#readme"
+}
